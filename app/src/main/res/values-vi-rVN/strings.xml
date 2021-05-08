@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quizzy</string>
+
+    <string name="btnLogin">đăng nhập</string>
+    <string name="btnRegister">đăng ký</string>
+    <string name="txtUsername">Tên đăng nhập</string>
+    <string name="txtPassword">Mật khẩu</string>
+    <string name="chonchude">chọn chủ đề</string>
+    <string name="btnCreateRoom">tạo phòng</string>
+    <string name="txtNoRoom">Hiện tại không có phòng nào trong lĩnh vực này.</string>
+    <string name="noOfQuest">Số câu hỏi</string>
+    <string name="player">Người chơi</string>
+    <string name="level">Cấp độ</string>
+    <string name="btnCloseRoom">huỷ phòng</string>
+    <string name="txtWaiting">ĐANG CHỜ NGƯỜI CHƠI 2...</string>
+    <string name="room">PHÒNG</string>
+    <string name="question">CÂU HỎI</string>
+    <string name="btnBackToStart">trở về</string>
+    <string name="topic">Chủ đề</string>
+    <string name="btnReady">sẵn sàng</string>
+    <string name="confirmation">Bạn muốn đăng xuất tài khoản?</string>
+    <string name="yes">Có</string>
+    <string name="no">Không</string>
+    <string name="signOut">đăng xuất</string>
+    <string name="txtPowerStore">mua power</string>
+    <string name="quantity">Số lượng</string>
+    <string name="buyConfirmation">Bạn muốn mua power</string>
+    <string name="powerType1">power phòng thủ</string>
+    <string name="powerType2">power tấn công</string>
+    <string name="price">Giá</string>
+    <string name="notEnoughMoney">Bạn không có đủ coin để mua power này.</string>
+    <string name="choosePower">Chọn power để trang bị (tối đa 4)</string>
+    <string name="powerLimitExceeded">Không được chọn quá 4 power.</string>
+    <string name="noPower">Không có</string>
+    <string name="powerChoosingTime">Chọn power cho câu hỏi tiếp theo.</string>
+    <string name="isWaiting">Đang chờ thí sinh</string>
+    <string name="questionHidden">Câu hỏi đã bị ẩn đi bởi power.</string>
+    <string name="noAudio">Nội dung audio đã bị vô hiệu hoá bởi power.</string>
+    <string name="noVideo">Video đã bị vô hiệu hoá bởi power.</string>
+    <string name="favoriteTopic">lĩnh vực yêu thích</string>
+    <string name="btnEdit">chỉnh sửa</string>
+    <string name="txtRecord">thống kê</string>
+    <string name="txtNoTopics">Bạn không có lĩnh vực yêu thích.</string>
+    <string name="deleteFromFavorite">Bạn muốn xoá khỏi danh sách lĩnh vực yêu thích lĩnh vực </string>
+    <string name="addToFavorite">Bạn muốn thêm vào danh sách lĩnh vực yêu thích lĩnh vực </string>
+    <string name="txtEditProfile">chỉnh sửa thông tin</string>
+    <string name="saveLoginInfo">Lưu thông tin đăng nhập?</string>
+    <string name="tie">hoà</string>
+    <string name="win">thắng</string>
+    <string name="matchInTopic">trong trận đấu thuộc lĩnh vực</string>
+    <string name="share">chia sẻ</string>
+    <string name="share2">chia sẻ vào quizzy\'s feed</string>
+    <string name="welcomeString1">Chào mừng đến với Quizzy,</string>
+    <string name="welcomeString2">. Bạn được tặng miễn phí 200 coin sau khi tạo tài khoản mới.</string>
+    <string name="rememberMe">Lưu thông tin đăng nhập</string>
+
+    //Statistics
+    <string name="title1">Lĩnh vực:</string>
+    <string name="title2">Số lần chơi:</string>
+    <string name="title3">Tỉ lệ đúng trung bình:</string>
+    <string name="title4">Thắng:</string>
+    <string name="title5">Hoà:</string>
+    <string name="title6">Thua:</string>
+    <string name="title7">Lần chơi tốt nhất:</string>
+    <string name="generalStatistic">Thống kê chung</string>
+    <string name="barChartLabel1">Tỉ lệ trả lời đúng (%)</string>
+    <string name="barChartLabel2">Thống kê 5 lần chơi gần nhất</string>
+    <string name="radarChartLabel">Tỉ lệ trả lời đúng trung bình các lĩnh vực (%)</string>
+    <string name="btnClose">đóng</string>
+    <string name="preventBackGame">Trận đấu chưa kết thúc!</string>
+    <string name="preventBackPreGame">Không thể ra khỏi phòng thi tại thời điểm này!</string>
+
+    //Power names
+    <string name="power0name">50/50</string>
+    <string name="power1name">Liều ăn nhiều</string>
+    <string name="power2name">Cứ từ từ</string>
+    <string name="power3name">Khiên</string>
+    <string name="power6name">Quá nhanh quá nguy hiểm</string>
+    <string name="power5name">Họa vô đơn chí</string>
+    <string name="power4name">Chia đôi cầu vồng</string>
+    <string name="power7name">Ú Òa</string>
+
+    //Power descriptions
+    <string name="power0des">Loại đi 2 đáp án sai. Lưu ý: Nếu bạn sử dụng power này và đối thủ tấn công bạn bằng power \"Chia đôi cầu vồng\", tất
+                             cả đáp án đều sẽ bị ẩn đi.</string>
+    <string name="power1des">Nhân đôi số điểm nếu trả lời đúng. Trừ đi số điểm tương ứng của câu nếu trả lời sai.</string>
+    <string name="power2des">Tăng 10 giây thời gian trả lời câu hỏi.</string>
+    <string name="power3des">Vô hiệu hoá phép tấn công của đối thủ.</string>
+    <string name="power6des">Thời gian trả lời câu hỏi của đối thủ bị giảm còn 1/2.</string>
+    <string name="power5des">Trừ điểm đối thủ nếu chọn sai.</string>
+    <string name="power4des">Bỏ ngẫu nhiên 2/4 phương án (có thể bao hàm cả phương án đúng).</string>
+    <string name="power7des">Nội dung câu hỏi (văn bản hoặc các dạng media khác) sẽ không được hiển thị cho đối thủ.</string>
+
+    //Power short description
+    <string name="power0shortdes">Loại 2 đáp án sai.</string>
+    <string name="power1shortdes">Nhân đôi nếu đúng, trừ nếu sai.</string>
+    <string name="power2shortdes">Cộng 10 giây.</string>
+    <string name="power3shortdes">Vô hiệu hoá tấn công của đối thủ.</string>
+
+    //Feed
+    <string name="chooseTopic">Chọn lĩnh vực:</string>
+    <string name="enterFeedTitle">Nội dung:</string>
+    <string name="choosePostImage">Chọn ảnh (nếu có)</string>
+    <string name="postFeedConfirmation">đăng</string>
+    <string name="likeCount">lượt thích</string>
+    <string name="comment">bình luận</string>
+    <string name="hour">giờ trước</string>
+    <string name="minute">phút trước</string>
+    <string name="seconds">giây trước</string>
+    <string name="days">ngày trước</string>
+    <string name="deleteImage">xoá ảnh</string>
+    <string name="changeImage">đổi ảnh</string>
+    <string name="deleteFeed">xoá feed</string>
+    <string name="back">trở về</string>
+    <string name="createFeedTitle">tạo feed</string>
+    <string name="editFeedTitle">chỉnh feed</string>
+    <string name="addComment">thêm bình luận</string>
+    <string name="deleteCommentConfirmation">Bạn muốn xoá bình luận này?</string>
+    <string name="blankContent">Nội dung trống</string>
+
+</resources>

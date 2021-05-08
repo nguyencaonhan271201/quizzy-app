@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Offline.RecordActivity"
+    android:background="#DBDBDB">
+
+    <RelativeLayout
+        android:id="@+id/rtloTopic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textAlignment="textEnd" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize = "16dp"
+            android:text="Lựa chọn lĩnh vực:" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id = "@+id/btnRecordConfirm"
+        android:layout_below="@id/rtloTopic"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        style="@style/quizzy_button"
+        android:text="xem"
+        android:minWidth="50dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:onClick="RecordStatistic"/>
+
+    <RelativeLayout
+        android:id = "@+id/rtloInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRecordConfirm"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/rtloTopic"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/txtRecordTopic"
+            android:textSize = "16sp"
+            android:text = "Lĩnh vực: " />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/txtAttemptsCount"
+            android:text = "Số lần chơi: "
+            android:textSize = "16sp"
+            android:layout_below="@id/txtRecordTopic"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/txtAverageScore"
+            android:text = "Điểm số trung bình: "
+            android:textSize = "16sp"
+            android:layout_below="@id/txtAttemptsCount"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/txtAverageRatio"
+            android:text = "Tỉ lệ đúng trung bình: "
+            android:textSize = "16sp"
+            android:layout_below="@id/txtAverageScore"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/txtBestScore"
+            android:text = "Điểm số cao nhất: "
+            android:textSize = "16sp"
+            android:layout_below="@id/txtAverageRatio"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/txtBestTrial"
+            android:text = "Lần chơi tốt nhất: "
+            android:textSize = "16sp"
+            android:layout_below="@id/txtBestScore"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id = "@+id/lnloInfoValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRecordConfirm"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toEndOf="@id/rtloInfo"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/txtRecordTopicValue"
+            android:textColor = "#000000"
+            android:textSize = "16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/txtAttemptsCountValue"
+            android:textColor = "#000000"
+            android:textSize = "16sp"
+            android:textStyle="bold"
+            android:layout_below="@id/txtRecordTopicValue"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/txtAverageScoreValue"
+            android:textColor = "#000000"
+            android:textSize = "16sp"
+            android:textStyle="bold"
+            android:layout_below="@id/txtAttemptsCountValue"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/txtAverageRatioValue"
+            android:textColor = "#000000"
+            android:textStyle="bold"
+            android:textSize = "16sp"
+            android:layout_below="@id/txtAverageScoreValue"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/txtBestScoreValue"
+            android:textColor = "#000000"
+            android:textSize = "16sp"
+            android:textStyle="bold"
+            android:layout_below="@id/txtAverageRatioValue"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/txtBestTrialValue"
+            android:textColor = "#000000"
+            android:textStyle="bold"
+            android:textSize = "16sp"
+            android:layout_below="@id/txtBestScoreValue"/>
+    </RelativeLayout>
+
+    <com.github.mikephil.charting.charts.RadarChart
+        android:id = "@+id/radarChart"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below = "@id/rtloInfo"
+        android:layout_margin="10dp"
+        android:visibility="invisible"
+        >
+    </com.github.mikephil.charting.charts.RadarChart>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id = "@+id/barChart"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below = "@id/rtloInfo"
+        android:layout_margin="10dp"
+        android:translationZ="2dp"
+        android:visibility="invisible">
+    </com.github.mikephil.charting.charts.BarChart>
+
+</RelativeLayout>

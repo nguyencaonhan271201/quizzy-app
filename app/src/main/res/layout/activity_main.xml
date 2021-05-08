@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_gradient_list"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="300dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/quizzy_logo_nobg_s" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif_swipe_left"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:alpha="0.3"
+        android:src="@drawable/swipe" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/gif_swipe_left"
+        android:layout_alignRight="@id/gif_swipe_left"
+        android:layout_alignBottom="@id/gif_swipe_left"
+        android:alpha="0.3"
+        android:gravity="center"
+        android:text="offline"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif_swipe_right"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:alpha="0.3"
+        android:rotation="180"
+        android:src="@drawable/swipe" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/gif_swipe_right"
+        android:layout_alignRight="@id/gif_swipe_right"
+        android:layout_alignBottom="@id/gif_swipe_right"
+        android:alpha="0.3"
+        android:gravity="center"
+        android:text="online"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-1443920174093607/9019126815">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>

@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#414345"
+    tools:context=".Online.GameActivity">
+
+    <FrameLayout
+        android:id="@+id/powerUseFragment"
+        android:name="powerUseFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        tools:layout="@layout/fragment_power_use"
+        android:translationZ="5dp"/>
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_centerInParent="true"
+            android:id="@+id/lnloGamePlayer1">
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:id="@+id/imgCardPlayer1"
+                android:transitionName="player1Transition"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical = "true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="30dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="0dp">
+
+                <com.example.quizzyapplication_v2.SquareImageView
+                    android:id="@+id/imgGamePlayer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher" />
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txtGamePlayer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PLAYER1"
+                    android:fontFamily="@font/nexa_bold"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:singleLine="false"/>
+                <TextView
+                    android:id="@+id/txtGamePlayer1Point"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:fontFamily="@font/nexa_bold"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="30sp"
+                    android:singleLine="false"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_centerInParent="true"
+            android:id="@+id/lnloGamePlayer2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txtGamePlayer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PLAYER2"
+                    android:fontFamily="@font/nexa_bold"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:singleLine="false"/>
+                <TextView
+                    android:id="@+id/txtGamePlayer2Point"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:fontFamily="@font/nexa_bold"
+                    android:textColor="@color/colorAccent"
+                    android:textAlignment="viewEnd"
+                    android:textSize="30sp"
+                    android:singleLine="false"/>
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imgCardPlayer2"
+                android:transitionName="player2Transition"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical = "true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="30dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="0dp">
+
+                <com.example.quizzyapplication_v2.SquareImageView
+                    android:id="@+id/imgGamePlayer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.example.quizzyapplication_v2.CustomDrawableProgressBar
+        android:id="@+id/onlinegameprogressbar"
+        android:layout_width="260dp"
+        android:layout_height="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:animationCache="false"
+        app:rcAnimationSpeedScale="1"
+        app:rcBackgroundColor="#26000000"
+        app:rcProgressDrawable="@drawable/game_timer_gradient"
+        app:rcRadius="40dp" />
+
+    <TextView
+        android:id="@+id/txtQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/onlinegameprogressbar"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/app_textview_rounded"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:text="GET READY"
+        android:textSize="20sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/onlineQuestionImageCard"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/onlinegameprogressbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:id="@+id/onlineQuestionImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_launcher" />
+    </androidx.cardview.widget.CardView>
+
+    <VideoView
+        android:id="@+id/questionVideo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/onlinegameprogressbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        android:visibility="invisible">
+    </VideoView>
+
+    <View
+        android:id="@+id/hideVideo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/onlinegameprogressbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        android:background="#000000"
+        android:translationZ="45dp"
+        android:visibility="invisible">
+    </View>
+
+    <ScrollView
+        android:id="@+id/svQ2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/txtQuestion">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lnloOptions2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="180dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnOpt1"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/app_button_border"
+                        android:minWidth="0dp"
+                        android:minHeight="80dp"
+                        android:onClick="Option1_Chosen"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        android:visibility="invisible"/>
+
+                    <Button
+                        android:id="@+id/btnOpt2"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/app_button_border"
+                        android:minWidth="0dp"
+                        android:minHeight="80dp"
+                        android:onClick="Option2_Chosen"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        android:visibility="invisible"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <Button
+                        android:id="@+id/btnOpt3"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/app_button_border"
+                        android:minWidth="0dp"
+                        android:minHeight="80dp"
+                        android:onClick="Option3_Chosen"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        android:visibility="invisible"/>
+
+                    <Button
+                        android:id="@+id/btnOpt4"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/app_button_border"
+                        android:minWidth="0dp"
+                        android:minHeight="80dp"
+                        android:onClick="Option4_Chosen"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        android:visibility="invisible"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnOnlineNextQuest"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/svQ2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/tick"
+        android:fontFamily="@font/nexa_bold"
+        android:onClick="btnNextQuest_click"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="50sp"
+        android:visibility="invisible"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/svQ2"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/lnloGamePowers"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible">
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:onClick="usePower"
+                android:id="@+id/rtloPower1">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgCardPower1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical = "true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    app:cardCornerRadius="35dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp">
+
+                    <com.example.quizzyapplication_v2.SquareImageView
+                        android:id="@+id/imgPower1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical = "true"
+                    app:cardCornerRadius="15dp"
+                    android:layout_alignRight="@id/imgCardPower1"
+                    android:layout_alignBottom="@id/imgCardPower1"
+                    android:layout_marginBottom="-10dp"
+                    app:cardBackgroundColor="#000000"
+                    android:translationZ="45dp"
+                    app:cardElevation="0dp">
+                    <TextView
+                        android:id="@+id/txtPowerQuantity1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="1"
+                        android:fontFamily="@font/nexa_bold"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:singleLine="false"/>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:onClick="usePower"
+                android:id="@+id/rtloPower2">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgCardPower2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical = "true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    app:cardCornerRadius="35dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp">
+
+                    <com.example.quizzyapplication_v2.SquareImageView
+                        android:id="@+id/imgPower2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical = "true"
+                    app:cardCornerRadius="15dp"
+                    android:layout_alignRight="@id/imgCardPower2"
+                    android:layout_alignBottom="@id/imgCardPower2"
+                    android:layout_marginBottom="-10dp"
+                    app:cardBackgroundColor="#000000"
+                    android:translationZ="45dp"
+                    app:cardElevation="0dp">
+                    <TextView
+                        android:id="@+id/txtPowerQuantity2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="1"
+                        android:fontFamily="@font/nexa_bold"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:singleLine="false"/>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:onClick="usePower"
+                android:id="@+id/rtloPower3">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgCardPower3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical = "true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    app:cardCornerRadius="35dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp">
+
+                    <com.example.quizzyapplication_v2.SquareImageView
+                        android:id="@+id/imgPower3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical = "true"
+                    app:cardCornerRadius="15dp"
+                    android:layout_alignRight="@id/imgCardPower3"
+                    android:layout_alignBottom="@id/imgCardPower3"
+                    android:layout_marginBottom="-10dp"
+                    app:cardBackgroundColor="#000000"
+                    android:translationZ="45dp"
+                    app:cardElevation="0dp">
+                    <TextView
+                        android:id="@+id/txtPowerQuantity3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="1"
+                        android:fontFamily="@font/nexa_bold"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:singleLine="false"/>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:onClick="usePower"
+                android:id="@+id/rtloPower4">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgCardPower4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical = "true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    app:cardCornerRadius="35dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp">
+
+                    <com.example.quizzyapplication_v2.SquareImageView
+                        android:id="@+id/imgPower4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical = "true"
+                    app:cardCornerRadius="15dp"
+                    android:layout_alignRight="@id/imgCardPower4"
+                    android:layout_alignBottom="@id/imgCardPower4"
+                    android:layout_marginBottom="-10dp"
+                    app:cardBackgroundColor="#000000"
+                    android:translationZ="45dp"
+                    app:cardElevation="0dp">
+                    <TextView
+                        android:id="@+id/txtPowerQuantity4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="1"
+                        android:fontFamily="@font/nexa_bold"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:singleLine="false"/>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Description"
+        android:fontFamily="@font/nexa_book"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:singleLine="false"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

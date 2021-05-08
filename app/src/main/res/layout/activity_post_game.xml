@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/post_game_background"
+    android:orientation="vertical"
+    tools:context="Offline.PostGameActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/topicImageCard"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_above="@id/txtPointPost"
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="#232526"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="0dp">
+
+        <com.example.quizzyapplication_v2.SquareImageView
+            android:id="@+id/topicImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtChooseTopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/topicImageCard"
+        android:layout_alignRight="@id/topicImageCard"
+        android:layout_alignBottom="@id/topicImageCard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp"
+        android:fontFamily="@font/nexa_bold"
+        android:gravity="center_horizontal"
+        android:shadowColor="@android:color/background_dark"
+        android:shadowDx="5"
+        android:shadowDy="6"
+        android:shadowRadius="1"
+        android:text="Chủ đề của bạn"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:translationZ="2dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/txtPointPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/nexa_bold"
+        android:gravity="center"
+        android:text="XXX"
+        android:textColor="#F39530"
+        android:textSize="150sp" />
+
+    <TextView
+        android:id="@+id/txtCorrectQuestPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtRatioPost"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/nexa_bold"
+        android:gravity="center"
+        android:text="Số câu đúng: x / x"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/txtRatioPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtPointPost"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/nexa_bold"
+        android:gravity="center"
+        android:text="Tỉ lệ trả lời đúng: x%"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCorrectQuestPost"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/quizzy_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:minWidth="120dp"
+            android:onClick="Share"
+            android:text="share kết quả"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            style="@style/quizzy_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="120dp"
+            android:onClick="BackToStart"
+            android:text="trở về bắt đầu"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="xemRecord"
+        android:src="@drawable/chart"
+        app:rippleColor="@null"
+        app:backgroundTint="@null"
+        app:fabSize="mini"
+        app:borderWidth="3dp"
+        android:outlineSpotShadowColor="@color/colorAccent"
+        android:outlineAmbientShadowColor="@color/colorAccent"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Online.ProfileActivity"
+    android:background="#232526">
+
+    <FrameLayout
+        android:id="@+id/statistic_fragment"
+        android:name="selectionFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_statistic"
+        android:translationZ="5dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation">
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:weightSum="3"
+                android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/profileCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical = "true"
+                        app:cardCornerRadius="65dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <com.example.quizzyapplication_v2.SquareImageView
+                            android:id="@+id/imgProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/default_ava"
+                            android:onClick="changeProfileImage"/>
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/txtProfileUsername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Username"
+                            android:fontFamily="@font/nexa_bold"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="26sp"
+                            android:singleLine="false"/>
+                        <TextView
+                            android:id="@+id/txtProfileLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nexa_book"
+                            android:layout_marginTop="5dp"
+                            android:text="Level: "
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20sp"
+                            android:singleLine="false"/>
+                        <TextView
+                            android:id="@+id/txtProfileExp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nexa_book"
+                            android:layout_marginTop="5dp"
+                            android:text="Exp: "
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20sp"
+                            android:singleLine="false"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/txtProfileCoin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/nexa_book"
+                                android:layout_gravity="center"
+                                android:text="Coin: "
+                                android:textColor="@color/colorAccent"
+                                android:textSize="20sp"/>
+                            <com.example.quizzyapplication_v2.SquareImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/coin">
+                            </com.example.quizzyapplication_v2.SquareImageView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+                            <Button
+                                style="@style/quizzy_button_w_bg"
+                                android:id="@+id/btnSignOut"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:onClick="SignOut"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold"
+                                android:text="@string/signOut"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop = "10dp"
+                android:id="@+id/rtloFavTop"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/favoriteTopic"
+                    android:id="@+id/txtFavTopic"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/nexa_bold"
+                    android:textSize="18sp"
+                    android:gravity="center_horizontal|center_vertical"/>
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/scvFavTopic"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/txtFavTopic">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:id="@+id/favoriteTopics"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"/>
+                </HorizontalScrollView>
+                <TextView
+                    android:id="@+id/txtNoTopics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtFavTopic"
+                    android:textAlignment="center"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/txtNoTopics"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="10dp"
+                    android:textStyle="italic"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nexa_bold"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/txtRecord"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_below="@id/txtFavTopic"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/statisticTopics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:id="@+id/lnloGeneral"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.luseen.spacenavigation.SpaceNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        app:active_item_color="@color/colorAccent"
+        app:centre_button_color="@color/colorPrimaryDark"
+        app:inactive_item_color="#383838"
+        app:space_background_color="#000000"
+        app:centre_button_icon="@drawable/quizzy_logo_nobg_s"
+        app:space_item_icon_size="30dp"
+        app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
+        app:space_item_text_size="@dimen/space_item_text_default_size" />
+
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.quizzyapplication_v2">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:allowAudioPlaybackCapture="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Online.CreateFeedActivity"></activity>
+        <activity
+            android:name=".Online.NewsFeedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Online.PowerStoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Online.TopicRoomActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Online.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Online.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Online.PreGameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Online.PostGameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Online.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Online.GameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Online.CreateRoomActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Online.ChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Online.StartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Offline.RecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Offline.PreGameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Offline.PostGameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Offline.InsertQuestionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Offline.GameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Offline.ChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1443920174093607~1616043853"/>
+    </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+</manifest>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#232526"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <View android:id="@+id/dummy"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_centerInParent="true"/>
+        <RelativeLayout
+            android:id = "@+id/rtloStatisticInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/dummy"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/txtInfo1"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/nexa_book"
+                android:layout_alignParentRight="true"
+                android:textSize = "16sp"
+                android:text = "@string/title1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/txtInfo2"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/nexa_book"
+                android:layout_alignParentRight="true"
+                android:text = "@string/title2"
+                android:textSize = "16sp"
+                android:layout_below="@id/txtInfo1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/txtInfo3"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/nexa_book"
+                android:layout_alignParentRight="true"
+                android:text = "@string/title3"
+                android:textSize = "16sp"
+                android:layout_below="@id/txtInfo2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/txtInfo4"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/nexa_book"
+                android:layout_alignParentRight="true"
+                android:text = "@string/title4"
+                android:textSize = "16sp"
+                android:layout_below="@id/txtInfo3"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/txtInfo5"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/nexa_book"
+                android:layout_alignParentRight="true"
+                android:text = "@string/title5"
+                android:textSize = "16sp"
+                android:layout_below="@id/txtInfo4"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/txtInfo6"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/nexa_book"
+                android:layout_alignParentRight="true"
+                android:text = "@string/title6"
+                android:textSize = "16sp"
+                android:layout_below="@id/txtInfo5"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/txtInfo7"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/nexa_book"
+                android:layout_alignParentRight="true"
+                android:text = "@string/title7"
+                android:textSize = "16sp"
+                android:layout_below="@id/txtInfo6"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id = "@+id/rtloStatisticValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/dummy"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/txtValue1"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/nexa_book"
+                android:textSize = "16sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/txtValue2"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/nexa_book"
+                android:textSize = "16sp"
+                android:layout_below="@id/txtValue1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/txtValue3"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/nexa_book"
+                android:textSize = "16sp"
+                android:layout_below="@id/txtValue2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/txtValue4"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/nexa_book"
+                android:textSize = "16sp"
+                android:layout_below="@id/txtValue3"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/txtValue5"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/nexa_book"
+                android:textSize = "16sp"
+                android:layout_below="@id/txtValue4"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/txtValue6"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/nexa_book"
+                android:textSize = "16sp"
+                android:layout_below="@id/txtValue5"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/txtValue7"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/nexa_book"
+                android:textSize = "16sp"
+                android:layout_below="@id/txtValue6"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:background="#DBDBDB"
+            android:id="@+id/profileChartBackground"/>
+        <com.github.mikephil.charting.charts.RadarChart
+            android:id = "@+id/profileRadarChart"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:visibility="invisible">
+        </com.github.mikephil.charting.charts.RadarChart>
+        <com.github.mikephil.charting.charts.BarChart
+            android:id = "@+id/profileBarChart"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:translationZ="2dp"
+            android:visibility="invisible">
+        </com.github.mikephil.charting.charts.BarChart>
+    </RelativeLayout>
+</LinearLayout>

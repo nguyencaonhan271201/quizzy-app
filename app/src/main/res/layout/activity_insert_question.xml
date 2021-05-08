@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Offline.InsertQuestionActivity"
+    android:background="#6F737A">
+
+    <LinearLayout
+        android:id = "@+id/lnloButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_margin="15dp">
+        <Button
+            android:id="@+id/themlv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:minHeight="35dp"
+            android:text = "thêm lĩnh vực"
+            android:textColor = "@color/colorAccent"
+            android:background="@drawable/insert_button_border"
+            android:textSize="18sp"
+            android:onClick = "insertTopic"
+            android:textAllCaps="false"
+            android:layout_marginRight="15dp"/>
+        <Button
+            android:id="@+id/themch"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:minHeight="35dp"
+            android:background="@drawable/insert_button_border"
+            android:text = "thêm câu hỏi"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor = "@color/colorAccent"
+            android:onClick="insertQuestion"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id = "@+id/rtloTopic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lnloButton"
+        android:visibility="invisible"
+        android:background="#DBDBDB">
+
+        <EditText
+            android:id = "@+id/edtTopicName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btnChooseImage"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:hint = "Tên lĩnh vực" />
+        <Button
+            android:id = "@+id/btnChooseImage"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text = "chọn ảnh lĩnh vực \n(nếu có)"
+            android:background="@drawable/app_button_border"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:onClick="chooseImageTopic"/>
+        <Button
+            android:id = "@+id/btnAddTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:background="@color/colorPrimaryDark"
+            android:layout_below="@id/btnChooseImage"
+            android:layout_marginTop="5dp"
+            android:text = "xác nhận"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:onClick="addTopic"/>
+        <ImageView
+            android:id = "@+id/imgTopicImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnAddTopic"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id = "@+id/rtloQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lnloButton"
+        android:gravity="center"
+        android:background="#DBDBDB"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:id="@+id/rtloQuestTopic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:textAlignment="textEnd"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/spinnerCategory"
+                android:layout_marginRight="5dp"
+                android:textSize = "18sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Lĩnh vực câu hỏi:" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rtloQuestDifficulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/rtloQuestTopic"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinnerDifficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentRight="true"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/spinnerDifficulty"
+                android:text="Độ khó câu hỏi:"
+                android:layout_marginRight="5dp"
+                android:textSize = "18sp"
+                android:textColor="@color/colorPrimaryDark"/>
+        </RelativeLayout>
+        <EditText
+            android:id = "@+id/edtQuestionContent"
+            android:layout_width="300dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:inputType="textLongMessage"
+            android:layout_below="@id/rtloQuestDifficulty"
+            android:textColor="@color/colorPrimaryDark"
+            android:hint = "Nội dung câu hỏi"/>
+        <EditText
+            android:id = "@+id/edtQuestOption1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:inputType="textLongMessage"
+            android:layout_below="@id/edtQuestionContent"
+            android:textColor="@color/colorPrimaryDark"
+            android:hint = "Phương án 1"/>
+        <EditText
+            android:id = "@+id/edtQuestOption2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:inputType="textLongMessage"
+            android:layout_below="@id/edtQuestOption1"
+            android:textColor="@color/colorPrimaryDark"
+            android:hint = "Phương án 2"/>
+        <EditText
+            android:id = "@+id/edtQuestOption3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:inputType="textLongMessage"
+            android:layout_below="@id/edtQuestOption2"
+            android:textColor="@color/colorPrimaryDark"
+            android:hint = "Phương án 3"/>
+        <EditText
+            android:id = "@+id/edtQuestOption4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:inputType="textLongMessage"
+            android:layout_below="@id/edtQuestOption3"
+            android:textColor="@color/colorPrimaryDark"
+            android:hint = "Phương án 4"/>
+        <RelativeLayout
+            android:id="@+id/rtloQuestCorrectOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/edtQuestOption4"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinnerCorrectOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:textAlignment="textEnd"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/spinnerCorrectOption"
+                android:text="Phương án đúng:"
+                android:layout_marginRight="5dp"
+                android:textSize = "18sp"
+                android:textColor="@color/colorPrimaryDark"/>
+        </RelativeLayout>
+
+        <Button
+            android:id = "@+id/btnQuestChooseImage"
+            android:layout_width="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/rtloQuestCorrectOption"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text = "Chọn ảnh câu hỏi\n(nếu có)"
+            android:background="@drawable/app_button_border"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:onClick="chooseImageQuestion"/>
+        <Button
+            android:id = "@+id/btnAddQuestion"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/btnQuestChooseImage"
+            android:text = "xác nhận"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginTop="5dp"
+            android:onClick="addQuestion"/>
+        <ImageView
+            android:id = "@+id/imgQuestImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/btnAddQuestion"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+</RelativeLayout>

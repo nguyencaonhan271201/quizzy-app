@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".Online.LevelUpFragment"
+    android:gravity="center"
+    android:background="#414345"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/levelup"
+        android:id="@+id/imgLevelUp"></ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Level "
+        android:fontFamily="@font/nexa_bold"
+        android:textColor="@color/colorAccent"
+        android:textSize="45sp"
+        android:layout_alignBottom="@id/imgLevelUp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/txtLevelUp"
+        ></TextView>
+
+    </RelativeLayout>

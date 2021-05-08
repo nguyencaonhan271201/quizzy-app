@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBDBDB"
+    android:orientation="vertical"
+    tools:context=".Online.CreateFeedActivity">
+
+    <TextView
+        android:id="@+id/txtCreateFeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nexa_bold"
+        android:gravity="center_vertical"
+        android:text="@string/createFeedTitle"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/btnUploadFeed"
+        style="@style/quizzy_button"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtCreateFeed"
+
+        android:layout_alignParentTop="true"
+
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:onClick="postFeed"
+        android:text="@string/postFeedConfirmation"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/rtloTopic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCreateFeed"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinnerInputPostTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textAlignment="textEnd" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/chooseTopic"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rtloFeedContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rtloTopic"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="24dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/enterFeedTitle"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/txtInputPostContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:minLines="1"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:textSize="16sp"></EditText>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnPostImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rtloFeedContent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:onClick="chooseImageFeed"
+        android:src="@drawable/image_upl" />
+
+    <ImageView
+        android:id="@+id/imgPostImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPostImage"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.luseen.spacenavigation.SpaceNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            app:active_item_color="@color/colorAccent"
+            app:centre_button_color="@color/colorPrimaryDark"
+            app:centre_button_icon="@drawable/quizzy_logo_nobg_s"
+            app:inactive_item_color="#383838"
+            app:space_background_color="#000000"
+            app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
+            app:space_item_icon_size="30dp"
+            app:space_item_text_size="@dimen/space_item_text_default_size" />
+    </RelativeLayout>
+
+</RelativeLayout>

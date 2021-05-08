@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBDBDB"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtEditFeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nexa_bold"
+        android:gravity="center_vertical"
+        android:text="@string/editFeedTitle"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="26sp" />
+
+    <ImageButton
+        android:id="@+id/btnEditFeed"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBottom="@id/txtEditFeed"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/v"
+
+        />
+
+    <ImageButton
+        android:id="@+id/btnDeleteFeed"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBottom="@id/txtEditFeed"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="2dp"
+
+        android:layout_toLeftOf="@id/btnEditFeed"
+
+        android:scaleType="centerCrop"
+        android:src="@drawable/trash" />
+
+    <LinearLayout
+        android:id="@+id/rtloFeedContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtEditFeed"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="24dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/enterFeedTitle"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/txtEditFeedContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:minLines="1"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:textSize="16sp"></EditText>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/back"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:id="@+id/imgEditPostly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rtloFeedContent"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/imgEditPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/powerbanner1" />
+
+        <ImageButton
+            android:id="@+id/btnEditDeleteImage"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@id/imgEditPost"
+            android:layout_alignRight="@id/imgEditPost"
+            android:layout_margin="5dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/x" />
+
+
+        <ImageButton
+            android:id="@+id/btnEditChangeImage"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@id/imgEditPost"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@id/btnEditDeleteImage"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_upl" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btnPostImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rtloFeedContent"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/image_upl"
+        android:visibility="invisible" />
+</RelativeLayout>

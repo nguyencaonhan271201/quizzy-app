@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/post_game_background"
+    android:orientation="vertical"
+    tools:context=".Online.PostGameActivity">
+
+    <FrameLayout
+        android:id="@+id/levelUpFragment"
+        android:name="levelUpFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        tools:layout="@layout/fragment_level_up"
+        android:translationZ="5dp"/>
+
+    <TextView
+        android:id="@+id/txtPostResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/nexa_bold"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="XXX"
+        android:textColor="@color/colorAccent"
+        android:textSize="70sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/txtPostResult"
+        android:id="@+id/lnloPostPlayers">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical = "true"
+                android:id="@+id/imgCardPlayer1"
+                android:transitionName="player1Transition"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="50dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="0dp">
+                <com.example.quizzyapplication_v2.SquareImageView
+                    android:id="@+id/imgPostPlayer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher" />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/txtPostPlayer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="PLAYER1"
+                android:fontFamily="@font/nexa_bold"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:singleLine="false"/>
+            <TextView
+                android:id="@+id/txtPostPlayer1Point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="000"
+                android:fontFamily="@font/nexa_bold"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                android:singleLine="false"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgCardPlayer2"
+                android:transitionName="player2Transition"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical = "true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="50dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="0dp">
+                <com.example.quizzyapplication_v2.SquareImageView
+                    android:id="@+id/imgPostPlayer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher" />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/txtPostPlayer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="PLAYER2"
+                android:textAlignment="center"
+                android:fontFamily="@font/nexa_bold"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:singleLine="false"/>
+            <TextView
+                android:id="@+id/txtPostPlayer2Point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/nexa_bold"
+                android:text="000"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                android:singleLine="false"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtPointPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lnloPostPlayers"
+        android:fontFamily="@font/nexa_bold"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="XXX"
+        android:textColor="#F39530"
+        android:textSize="100sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@id/txtPointPost"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:id="@+id/lnloCoin"
+        android:orientation="horizontal">
+        <com.example.quizzyapplication_v2.SquareImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/coin">
+        </com.example.quizzyapplication_v2.SquareImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/txtPostCoin"
+            android:text="0"
+            android:layout_marginLeft="5dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="gravity"
+            android:fontFamily="@font/nexa_bold"
+            android:textSize="30sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtPostTopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lnloCoin"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/nexa_bold"
+        android:gravity="center"
+        android:text="CHỦ ĐỀ: "
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtPostTopic"
+        android:id="@+id/lnloButton"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/quizzy_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:minWidth="150dp"
+            android:onClick="Share"
+            android:text="@string/share"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            style="@style/quizzy_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="150dp"
+            android:onClick="BackToStart"
+            android:text="@string/btnBackToStart"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+
+    <Button
+        style="@style/quizzy_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_centerInParent="true"
+        android:minWidth="150dp"
+        android:onClick="ShareToFeed"
+        android:layout_below="@id/lnloButton"
+        android:text="@string/share2"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent" />
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAnimationStyle">@style/AppTheme.WindowTransition</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <style name="AppTheme.WindowTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+    <style name="quizzy_button">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:minWidth">100dp</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:background">@drawable/app_button_border</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="quizzy_button_w_bg">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:minWidth">100dp</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:background">@drawable/app_button_border_w_bg</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="quizzy_button_w_darkbg">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:minWidth">100dp</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:background">@drawable/app_button_border_w_dbg</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="quizzy_game_button">
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:insetTop">2dp</item>
+        <item name="android:insetBottom">2dp</item>
+        <item name="android:insetLeft">2dp</item>
+        <item name="android:insetRight">2dp</item>
+        <item name="android:minWidth">88dp</item>
+        <item name="android:minHeight">80dp</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:background">@drawable/app_button_border</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="quizzy_button_correct" parent="quizzy_game_button">
+        <item name="android:background">@drawable/app_button_border_correct</item>
+    </style>
+
+    <style name="quizzy_button_wrong" parent="quizzy_game_button">
+        <item name="android:background">@drawable/app_button_border_wrong</item>
+    </style>
+
+    <style name="spinner_style" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TwoWayView">
+        <item name="android:orientation">horizontal</item>
+    </style>
+</resources>

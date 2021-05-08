@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="#232526">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:id="@+id/rtloPower1">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imgPowerStoreCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical = "true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="25dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="0dp">
+
+            <com.example.quizzyapplication_v2.SquareImageView
+                android:id="@+id/imgPowerStoreIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical = "true"
+            app:cardCornerRadius="15dp"
+            android:layout_alignRight="@id/imgPowerStoreCard"
+            android:layout_alignBottom="@id/imgPowerStoreCard"
+            android:layout_marginBottom="-15dp"
+            app:cardBackgroundColor="#000000"
+            android:translationZ="45dp"
+            app:cardElevation="0dp">
+            <TextView
+                android:id="@+id/power_store_power_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:text="0"
+                android:fontFamily="@font/nexa_bold"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:singleLine="false"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="5"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/power_store_power_name"
+            android:layout_below="@id/topicImageCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/nexa_bold"
+            android:text="Power Name"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/power_store_power_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/nexa_book"
+            android:layout_gravity="center"
+            android:text="Power Description"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:singleLine="false"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/power_store_power_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nexa_book"
+                android:layout_gravity="center"
+                android:text="Power Price"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"/>
+            <com.example.quizzyapplication_v2.SquareImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/coin">
+            </com.example.quizzyapplication_v2.SquareImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

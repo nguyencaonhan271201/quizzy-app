@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">Quizzy</string>
+    <string name="dummy_button" translatable="false">Dummy Button</string>
+    <string name="dummy_content" translatable="false">DUMMY\nCONTENT</string>
+    <string name="title_activity_main" translatable="false">FullscreenActivity</string>
+
+    <string name="btnLogin">login</string>
+    <string name="btnRegister">register</string>
+    <string name="txtUsername">Username</string>
+    <string name="txtPassword">Password</string>
+    <string name="chonchude">choose topic</string>
+    <string name="btnCreateRoom">create room</string>
+    <string name="txtNoRoom">There are currently no rooms in this topic.</string>
+    <string name="noOfQuest"># of questions</string>
+    <string name="player">Player</string>
+    <string name="level">Level</string>
+    <string name="btnCloseRoom">close room</string>
+    <string name="txtWaiting">WAITING FOR PLAYER 2...</string>
+    <string name="room">ROOM</string>
+    <string name="question">QUESTION</string>
+    <string name="btnBackToStart">back</string>
+    <string name="topic">Topic</string>
+    <string name="btnReady">ready</string>
+    <string name="confirmation">Do you want to sign out?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="signOut">sign out</string>
+    <string name="txtPowerStore">power store</string>
+    <string name="quantity">Quantity</string>
+    <string name="buyConfirmation">Do you want to buy power</string>
+    <string name="powerType1">defensive powers</string>
+    <string name="powerType2">attack powers</string>
+    <string name="price">Price</string>
+    <string name="notEnoughMoney">You don\'t have enough coins to buy this power.</string>
+    <string name="choosePower">Choose powers to equip (maximum 4)</string>
+    <string name="powerLimitExceeded">Can\'t choose more than 4 powers.</string>
+    <string name="noPower">Not available</string>
+    <string name="powerChoosingTime">Choose your power for the next question.</string>
+    <string name="isWaiting">Is waiting for player</string>
+    <string name="questionHidden">The question has been hidden by attack power.</string>
+    <string name="noAudio">The audio has been hidden by power.</string>
+    <string name="noVideo">Video has been hidden by power.</string>
+    <string name="favoriteTopic">favorite topics</string>
+    <string name="btnEdit">edit</string>
+    <string name="txtRecord">statistics</string>
+    <string name="txtNoTopics">You have no favorite topics.</string>
+    <string name="deleteFromFavorite">Do you want to delete from favorite list topic </string>
+    <string name="addToFavorite">Do you want to add to your favorite list topic </string>
+    <string name="txtEditProfile">edit profile</string>
+    <string name="saveLoginInfo">Save login information?</string>
+    <string name="tie">tied</string>
+    <string name="win">won</string>
+    <string name="matchInTopic">on a match in topic</string>
+    <string name="share">share</string>
+    <string name="share2">share to quizzy\'s feed</string>
+    <string name="rememberMe">Remember me</string>
+
+    //Statistics
+    <string name="title1">Topic:</string>
+    <string name="title2">Number of games:</string>
+    <string name="title3">Average correct ratio:</string>
+    <string name="title4">Win:</string>
+    <string name="title5">Tie:</string>
+    <string name="title6">Lose:</string>
+    <string name="title7">Best trial:</string>
+    <string name="generalStatistic">General</string>
+    <string name="barChartLabel1">Correct ratio (%)</string>
+    <string name="barChartLabel2">Statistics of 5 most recent games</string>
+    <string name="radarChartLabel">Average correct ratio (%) of topics</string>
+    <string name="btnClose">close</string>
+    <string name="welcomeString1">Welcome to Quizzy,</string>
+    <string name="welcomeString2">. You are awarded with 200 free coins for account registering.</string>
+    <string name="preventBackGame">The game is not over!</string>
+    <string name="preventBackPreGame">Can\'t get out of the room at the moment!</string>
+
+    //Power names
+    <string name="power0name">50/50</string>
+    <string name="power1name">Gamble</string>
+    <string name="power2name">Take your time</string>
+    <string name="power3name">SHIELD</string>
+    <string name="power6name">Gotta go fast!</string>
+    <string name="power5name">Kamehameha!</string>
+    <string name="power4name">Slice and Dice</string>
+    <string name="power7name">Peekaboo</string>
+
+    //Power descriptions
+    <string name="power0des">Eliminate 2 wrong answers. Caution: if you use this power and your opponent attack you with power \"Slice and Dice\", all answers
+                             will be disappeared.</string>
+    <string name="power1des">Double the point of the question if answer correctly. Otherwise, minus your point with the point of the question.</string>
+    <string name="power2des">Add 10 seconds to the answering time of the question.</string>
+    <string name="power3des">Disable the attack power of the opponent if used.</string>
+    <string name="power6des">Divide half of the answering time of the opponent for a question.</string>
+    <string name="power5des">If opponent answers incorrectly, minus his/her point with the point of the question.</string>
+    <string name="power4des">Eliminate 2 random answers (may contain the correct one).</string>
+    <string name="power7des">The question content (text and all forms of media) will not be shown to the opponent.</string>
+
+    //Power short description
+    <string name="power0shortdes">Eliminate 2 wrong answers.</string>
+    <string name="power1shortdes">Double if correct, minus if wrong.</string>
+    <string name="power2shortdes">Add 10 seconds.</string>
+    <string name="power3shortdes">Disable opponent\'s attacks.</string>
+
+    //Feed
+    <string name="chooseTopic">Choose topic:</string>
+    <string name="enterFeedTitle">What\'s on your mind? :</string>
+    <string name="choosePostImage">Image (if available)</string>
+    <string name="postFeedConfirmation">post</string>
+    <string name="likeCount">likes</string>
+    <string name="comment">comments</string>
+    <string name="hour">hours ago</string>
+    <string name="minute">minutes ago</string>
+    <string name="seconds">seconds ago</string>
+    <string name="days">days ago</string>
+    <string name="deleteImage">delete image</string>
+    <string name="changeImage">change image</string>
+    <string name="deleteFeed">delete feed</string>
+    <string name="back">back</string>
+    <string name="createFeedTitle">create feed</string>
+    <string name="editFeedTitle">edit feed</string>
+    <string name="addComment">add comment</string>
+    <string name="deleteCommentConfirmation">Do you want to the delete this comment?</string>
+    <string name="blankContent">Blank content</string>
+</resources>
